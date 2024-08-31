@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Pousada Recanto Feliz</title>
+    <link href='https://www.soengsouy.com/favicon.ico' rel='icon' type='image/x-icon'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- library validate -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.js"></script>
+    <!-- style css -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+   
+ <div class="titulo">
+      <center> 
+          <h2>Check-out Pousada Recanto Feliz</h2>
+     </center>
+     </div>
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form id="validate" action="/action_page.php">
+                <div class="row">
+                    <div class="col-50">
+                        <h3 style="color:#f5f5f5;">Informaçoes do Hospede</h3>
+                        <label style="color:#f5f5f5;" for="fname"><i class="fa fa-user"></i> Nome completo</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Vitor Souza Camargo Ribeiro" required>
+                        <label style="color:#f5f5f5;" for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="Vitorsc@gamil.com" required>
+                        <label style="color:#f5f5f5;" for="adr"><i class="fa fa-address-card-o"></i> Endereço</label>
+                        <input type="text" id="adr" name="address" placeholder="R.Presidente Vargas N:105" required>
+                        <label style="color:#f5f5f5;" for="city"><i class="fa fa-institution"></i> Cidade</label>
+                        <input type="text" id="city" name="city" placeholder="Atibaia" required>
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label style="color:#f5f5f5;" for="state">Estado</label>
+                                <input type="text" id="state" name="state" placeholder="São Paulo"required>
+                            </div>
+                            <div class="col-50">
+                                <label style="color:#f5f5f5;" for="zip">Cep</label>
+                                <input type="text" id="zip" name="zip" placeholder="12000"required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-50">
+                        <h3 style="color:#f5f5f5;">Pagamento</h3>
+                        <label style="color:#f5f5f5;" for="fname">Aceitamos os seguintes cartões</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+
+                        <label style="color:#f5f5f5;" for="cname">Nome do propietário do cartão</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Vitor S C Ribeiro"required>
+                        <label style="color:#f5f5f5;" for="ccnum">Numeros do Cartão</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"required>
+                        <label style="color:#f5f5f5;" for="expmonth">Més de vencimento do cartão </label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="Abril"required>
+                        <div class="row">
+                            <div class="col-50">
+                                <label style="color:#f5f5f5;" for="expyear">Ano de vencimento</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2021"required>
+                            </div>
+                            <div class="col-50">
+                                <label style="color:#f5f5f5;" for="cvv">Codigo de segurança</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="352"required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label  style="color:#f5f5f5;">
+                <input  type="checkbox" checked="checked" name="sameadr"> Confirmar dados
+                </label>
+                <input type="submit" value="Check-out" class="btn">
+            </form>
+        </div>
+    </div>
+    <div class="col-25">
+        <div class="container">
+            <h4 style="color:#f5f5f5;">Carrinho <span class="price" style="color:white"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <p ><a href="#">Passeio turistico</a> <span class="price">R$1500</span></p>
+            <p ><a href="#">Almoço</a> <span class="price">R$300</span></p>
+            <p><a href="#">Jantar</a> <span class="price">R$300</span></p>
+            <p><a href="#">Hospedagem</a> <span class="price">R$1500</span></p>
+            <hr>
+            <p style="color:#f5f5f5;">Total <span class="price" style="color:white"><b>R$3600</b></span></p>
+        </div>
+    </div>
+</div>
+<!-- script validate js -->
+<script>
+    $('#validate').validate({
+        roles: {
+            fullname: {
+                required: true,
+            },
+            email: {
+                required: true,
+            },
+            address: {
+                required: true,
+            },
+            city: {
+                required: true,
+            },
+            state: {
+                required: true,
+            },
+            zip: {
+                required: true,
+            },
+            cardname: {
+                required: true,
+            },
+            cardnumber: {
+                required: true,
+            },
+            expmonth: {
+                required: true,
+            },
+            expyear: {
+                required: true,
+            },
+            cvv: {
+                required: true,
+            },
+           
+        },
+        messages: {
+            fullname:"Campo Obrigatorio",
+            email:"Campo Obrigatorio*",
+            city:"Campo Obrigatorio*",
+            address:"Campo Obrigatorio*",
+            state:"Campo Obrigatorio*",
+            zip:"Campo Obrigatorio*",
+            cardname:"Campo Obrigatorio*",
+            cardnumber:"Campo Obrigatorio*",
+            expmonth:"Campo Obrigatorio*",
+            expyear:"Campo Obrigatorio*",
+            cvv:"Campo Obrigatorio*",
+        },
+    });
+</script>
+</body>
+</html>
